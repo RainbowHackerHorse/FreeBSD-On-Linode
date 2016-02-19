@@ -65,4 +65,3 @@ Networking:
 You can verify integrity of the image by downloading freebsd102-linode.sig
 from either my github or the fileserver you found this on.
 Grab my key (0x5F94763A) and run $gpg --verify freebsd102-linode.sig freebsd102-linode.img
-This signature file totally doesn't exist yet, I'll be signing it eventually. I'll sign my locally saved offline copy located on an encrypted drive that's never directly connected to the net (where i cache most of my installers and stuff), so it'll be a pretty sure thing it wasn't tampered with before I got around to signing it and uploading the .sig file.
