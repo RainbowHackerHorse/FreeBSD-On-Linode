@@ -1,0 +1,2 @@
+GitHub hates large files and I can't be bothered to muck with Git LFS right now.
+Find the File at: https://cloudsdale.hacker.horse/~rainbow/installers/freebsd102-linode.img
