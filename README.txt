@@ -2,6 +2,7 @@ This is a FreeBSD 10.2-RELEASE image installed from the 10.2-RELEASE
 mini-memstick installer. It is meant to be used with a paravirtual 
 KVM Linode from http://linode.com
 Filesize is 2048 Mb
+Find the installer at:https://cloudsdale.hacker.horse/~rainbow/installers/freebsd102-linode.img
 Certain changes made to this image will cause some freatures to not
 work right off the bat with a Full Virtualization Linode.
 THIS IMAGE WILL NOT BOOT ON A Xen LINODE.
