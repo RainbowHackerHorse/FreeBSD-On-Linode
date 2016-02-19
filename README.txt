@@ -1,4 +1,3 @@
-# FreeBSD-On-Linode
 This is a FreeBSD 10.2-RELEASE image installed from the 10.2-RELEASE
 mini-memstick installer. It is meant to be used with a paravirtual 
 KVM Linode from http://linode.com
@@ -65,4 +64,4 @@ Networking:
 	
 You can verify integrity of the image by downloading freebsd102-linode.sig
 from either my github or the fileserver you found this on.
-Grab my key (0x5F94763A) and run 
+Grab my key (0x5F94763A) and run $gpg --verify freebsd102-linode.sig freebsd102-linode.img
