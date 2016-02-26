@@ -16,7 +16,7 @@ The following changes have been made:
 	hostname is set to freebsd102
 	ZFS is enabled. To keep the image size down, we have kept the image to 2GB
 	The autoexpand=on zpool property has been set on the root zpool, zroot
-	Once you've dd'd it to the disk you want and made sure the disk is the dize
+	Once you've dd'd it to the disk you want and made sure the disk is the size
 	you want, log in and run these commands:
 		gpart recover da0
 		gpart resize -i 2 da0
