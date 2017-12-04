@@ -13,11 +13,16 @@
 This is a FreeBSD 11.1-RELEASE image installed from the 11.1-RELEASE
 mini-memstick installer. It is meant to be used with a paravirtual 
 KVM Linode from http://linode.com
+
 Filesize is 1536 Mb
+
 The Installer is now an IMG file in this repo delivered by git-lfs
+
 https://git-lfs.github.com/
+
 Certain changes made to this image will cause some freatures to not
 work right off the bat with a Full Virtualization Linode.
+
 THIS IMAGE WILL NOT BOOT ON A Xen LINODE.
 
 ## Configuration
@@ -28,12 +33,17 @@ The following changes have been made:
 	boot_serial="YES"
 	comconsole_speed="115200"
 	console="comconsole,vidconsole"
-hostname is set to freebsd111
+
+Hostname is set to "freebsd111"
+
 ZFS is enabled. To keep the image size down, we have kept the image to 1.5GB
-The autoexpand=on zpool property has been set on the root zpool, zroot.
+The `autoexpand=on` zpool property has been set on the root zpool, `zroot`.
+
 This was done by running `zpool set autoexpand=on zroot`
+
 Once you've dd'd it to the disk you want and made sure the disk is the dize
-you want, log in and run these commands:
+you want, reboot your Linode into your FreeBSD installation,
+log in, and run these commands:
 
 	gpart recover da0
 	gpart resize -i 2 da0
@@ -66,7 +76,8 @@ You can enable it by running:
 	swapon /dev/da1
 
 Then add your swap disk to /etc/fstab according to https://www.freebsd.org/doc/handbook/adding-swap-space.html
-Default would be:
+
+Default, if you use a swap disk created in the Linode Dashboard, would be:
 
 	/dev/da1	none	swap	sw	0	0
 
@@ -90,9 +101,11 @@ Default would be:
 
 ## Verification and Integrity Checking
 	
-You can verify integrity of the image by downloading freebsd111-linode.sig
+You can verify integrity of the image by downloading `freebsd111-linode.sig`
 from either my github or the fileserver you found this on.
+
 Grab my key (0x7D1919E3) and run `gpg --verify freebsd111-linode.sig freebsd111-linode.img`
+
 The file was signed by running:
 `gpg --output freebsd111-linode.sig --detach-sig freebsd111-linode.img`
 
