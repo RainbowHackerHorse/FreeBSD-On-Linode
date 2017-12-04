@@ -29,6 +29,7 @@ THIS IMAGE WILL NOT BOOT ON A Xen LINODE.
 
 The following changes have been made:
 /boot/loader.conf contains these lines
+
 	boot_multicons="YES"
 	boot_serial="YES"
 	comconsole_speed="115200"
