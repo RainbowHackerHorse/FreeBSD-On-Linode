@@ -24,19 +24,19 @@ THIS IMAGE WILL NOT BOOT ON A Xen LINODE.
 
 The following changes have been made:
 /boot/loader.conf contains these lines
-		boot_multicons="YES"
-		boot_serial="YES"
-		comconsole_speed="115200"
-		console="comconsole,vidconsole"
+	boot_multicons="YES"
+	boot_serial="YES"
+	comconsole_speed="115200"
+	console="comconsole,vidconsole"
 hostname is set to freebsd111
 ZFS is enabled. To keep the image size down, we have kept the image to 1.5GB
 The autoexpand=on zpool property has been set on the root zpool, zroot.
 This was done by running `zpool set autoexpand=on zroot`
 Once you've dd'd it to the disk you want and made sure the disk is the dize
 you want, log in and run these commands:
-		gpart recover da0
-		gpart resize -i 2 da0
-		zpool online -e zroot /dev/da0p2
+	gpart recover da0
+	gpart resize -i 2 da0
+	zpool online -e zroot /dev/da0p2
 This will expand your zpool to your full disk size.
 Clock is set to localtime
 Timezone is set to UTC
@@ -45,7 +45,7 @@ Timezone is set to UTC
 ###	/!\ /!\ /!\  OR GLISH  FROM THE REMOTE ACCESS TAB /!\ /!\ /!\
 	
 ### Default root password: 
-	`changeme`
+	changeme
 
 	
 ### ZFS Configuration:
@@ -60,10 +60,10 @@ Timezone is set to UTC
 	
 ### Swap: Please enable your own swap. Consider a second disk mounted as /dev/da1
 You can enable it by running:
-		swapon /dev/da1
+	swapon /dev/da1
 Then add your swap disk to /etc/fstab according to https://www.freebsd.org/doc/handbook/adding-swap-space.html
 Default would be:
-		/dev/da1	none	swap	sw	0	0
+	/dev/da1	none	swap	sw	0	0
 
 ### Datasets:
 Base
