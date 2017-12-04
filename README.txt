@@ -71,6 +71,8 @@ Packages:
 You can verify integrity of the image by downloading freebsd111-linode.sig
 from either my github or the fileserver you found this on.
 Grab my key (0x5F94763A) and run `gpg --verify freebsd111-linode.sig freebsd111-linode.img`
+The file was signed by running:
+`gpg --output freebsd111-linode.sig --detach-sig freebsd111-linode.img`
 
 Installation is as simple as:
 1. Create a new disk.
