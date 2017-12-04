@@ -27,7 +27,7 @@ THIS IMAGE WILL NOT BOOT ON A Xen LINODE.
 
 ## Configuration
 
-The following changes have been made:
+### The following changes have been made:
 
 `/boot/loader.conf` contains these lines
 
