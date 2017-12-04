@@ -34,9 +34,11 @@ The autoexpand=on zpool property has been set on the root zpool, zroot.
 This was done by running `zpool set autoexpand=on zroot`
 Once you've dd'd it to the disk you want and made sure the disk is the dize
 you want, log in and run these commands:
+
 	gpart recover da0
 	gpart resize -i 2 da0
 	zpool online -e zroot /dev/da0p2
+	
 This will expand your zpool to your full disk size.
 Clock is set to localtime
 Timezone is set to UTC
