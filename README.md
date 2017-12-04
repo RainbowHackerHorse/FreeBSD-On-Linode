@@ -23,24 +23,24 @@ THIS IMAGE WILL NOT BOOT ON A Xen LINODE.
 ## Configuration
 
 The following changes have been made:
-	/boot/loader.conf contains these lines
-		`boot_multicons="YES"`
-		`boot_serial="YES"`
-		`comconsole_speed="115200"`
-		`console="comconsole,vidconsole"`
-	hostname is set to freebsd111
-	ZFS is enabled. To keep the image size down, we have kept the image to 1.5GB
-	The autoexpand=on zpool property has been set on the root zpool, zroot.
-	This was done by running `zpool set autoexpand=on zroot`
-	Once you've dd'd it to the disk you want and made sure the disk is the dize
-	you want, log in and run these commands:
-		`gpart recover da0`
-		`gpart resize -i 2 da0`
-		`zpool online -e zroot /dev/da0p2`
-	This will expand your zpool to your full disk size.
-	Clock is set to localtime
-	Timezone is set to UTC
-	
+/boot/loader.conf contains these lines
+		boot_multicons="YES"
+		boot_serial="YES"
+		comconsole_speed="115200"
+		console="comconsole,vidconsole"
+hostname is set to freebsd111
+ZFS is enabled. To keep the image size down, we have kept the image to 1.5GB
+The autoexpand=on zpool property has been set on the root zpool, zroot.
+This was done by running `zpool set autoexpand=on zroot`
+Once you've dd'd it to the disk you want and made sure the disk is the dize
+you want, log in and run these commands:
+		gpart recover da0
+		gpart resize -i 2 da0
+		zpool online -e zroot /dev/da0p2
+This will expand your zpool to your full disk size.
+Clock is set to localtime
+Timezone is set to UTC
+
 ###	/!\ /!\ /!\ SSH IS DISABLED BY DEFAULT. PLEASE LOG IN VIA LISH /!\ /!\ /!\
 ###	/!\ /!\ /!\  OR GLISH  FROM THE REMOTE ACCESS TAB /!\ /!\ /!\
 	
@@ -59,29 +59,29 @@ The following changes have been made:
 	Encrypt Swap?: NO
 	
 ### Swap: Please enable your own swap. Consider a second disk mounted as /dev/da1
-	You can enable it by running:
-		`swapon /dev/da1`
-	Then add your swap disk to /etc/fstab according to https://www.freebsd.org/doc/handbook/adding-swap-space.html
-	Default would be:
-	`/dev/da1	none	swap	sw	0	0`
+You can enable it by running:
+		swapon /dev/da1
+Then add your swap disk to /etc/fstab according to https://www.freebsd.org/doc/handbook/adding-swap-space.html
+Default would be:
+		/dev/da1	none	swap	sw	0	0
 
 ### Datasets:
-	Base
-	lib32
-	src
-	
+Base
+lib32
+src
+
 ### Keymap:
-	Default en-US
-	
+Default en-US
+
 ### Networking:
-	Interface is vtnet0
-	IPv4 is provided by DHCP
-	IPv4 DNS is set to 8.8.8.8
-	IPv6 is assigned via SLAAC
-	IPv6 DNS is set to 2600:3c03::5 (Newark)
+Interface is vtnet0
+IPv4 is provided by DHCP
+IPv4 DNS is set to 8.8.8.8
+IPv6 is assigned via SLAAC
+IPv6 DNS is set to 2600:3c03::5 (Newark)
 
 ### Packages:
-	`pkg` has been bootstrapped. No database has been created and no other ports installed.
+`pkg` has been bootstrapped. No database has been created and no other ports installed.
 
 ## Verification and Integrity Checking
 	
