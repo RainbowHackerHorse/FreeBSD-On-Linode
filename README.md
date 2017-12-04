@@ -60,9 +60,12 @@ Timezone is set to UTC
 	
 ### Swap: Please enable your own swap. Consider a second disk mounted as /dev/da1
 You can enable it by running:
+	
 	swapon /dev/da1
+
 Then add your swap disk to /etc/fstab according to https://www.freebsd.org/doc/handbook/adding-swap-space.html
 Default would be:
+
 	/dev/da1	none	swap	sw	0	0
 
 ### Datasets:
