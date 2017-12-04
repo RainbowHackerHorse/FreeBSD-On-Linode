@@ -16,7 +16,8 @@ The following changes have been made:
 		`console="comconsole,vidconsole"`
 	hostname is set to freebsd111
 	ZFS is enabled. To keep the image size down, we have kept the image to 1.5GB
-	The autoexpand=on zpool property has been set on the root zpool, zroot
+	The autoexpand=on zpool property has been set on the root zpool, zroot.
+	This was done by running `zpool set autoexpand=on zroot`
 	Once you've dd'd it to the disk you want and made sure the disk is the dize
 	you want, log in and run these commands:
 		`gpart recover da0`
@@ -26,8 +27,8 @@ The following changes have been made:
 	Clock is set to localtime
 	Timezone is set to UTC
 	
-	/!\ /!\ /!\ SSH IS DISABLED BY DEFAULT. PLEASE LOG IN VIA LISH /!\ /!\ /!\
-	/!\ /!\ /!\  OR GLISH  FROM THE REMOTE ACCESS TAB /!\ /!\ /!\
+##	/!\ /!\ /!\ SSH IS DISABLED BY DEFAULT. PLEASE LOG IN VIA LISH /!\ /!\ /!\
+##	/!\ /!\ /!\  OR GLISH  FROM THE REMOTE ACCESS TAB /!\ /!\ /!\
 	
 Default root password: changeme
 
