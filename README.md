@@ -105,4 +105,11 @@ This key was signed by my personal key, and should be considered to be as truste
 Installation is as simple as:
 1. Create a new disk.
 2. Boot into rescue mode
-3. Run
+3. From Rescue Mode, run the following:
+
+	apt-get update
+	apt-get install -y ca-certificates
+	wget -O - https://github.com/RainbowHackerHorse/FreeBSD-On-Linode/raw/master/freebsd111-linode.img  | dd of=/dev/sda
+
+It'll take a little while to run, as GitHub's LFS server can be a bit slow to initially retrive the file.
+I may move to other storage for future releases.
