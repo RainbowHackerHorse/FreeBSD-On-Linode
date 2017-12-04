@@ -2,11 +2,11 @@
 
 #### Table of Contents
 
-1. [What is this?](#What-is-this)
-2. [Configuration](#Configuration)
-3. [Verification and Integrity Checking](#Verification-and-integrity-checking)
-4. [Notes](#Notes)
-5. [Installation](#Installation)
+1. [What is this?](#what-is-this)
+2. [Configuration](#configuration)
+3. [Verification and Integrity Checking](#verification-and-integrity-checking)
+4. [Notes](#notes)
+5. [Installation](#installation)
 
 ## What is this?
 
