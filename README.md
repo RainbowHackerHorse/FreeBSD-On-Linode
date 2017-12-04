@@ -38,9 +38,9 @@ you want, log in and run these commands:
 	gpart recover da0
 	gpart resize -i 2 da0
 	zpool online -e zroot /dev/da0p2
-	
+
 This will expand your zpool to your full disk size.
-Clock is set to localtime
+
 Timezone is set to UTC
 
 ###	/!\ /!\ /!\ SSH IS DISABLED BY DEFAULT. PLEASE LOG IN VIA LISH /!\ /!\ /!\
