@@ -64,7 +64,15 @@ Networking:
 	IPv4 DNS is set to 8.8.8.8
 	IPv6 is assigned via SLAAC
 	IPv6 DNS is set to 2600:3c03::5 (Newark)
+
+Packages:
+	`pkg` has been bootstrapped. No database has been created and no other ports installed.
 	
 You can verify integrity of the image by downloading freebsd111-linode.sig
 from either my github or the fileserver you found this on.
 Grab my key (0x5F94763A) and run `gpg --verify freebsd111-linode.sig freebsd111-linode.img`
+
+Installation is as simple as:
+1. Create a new disk.
+2. Boot into rescue mode
+3. Run
