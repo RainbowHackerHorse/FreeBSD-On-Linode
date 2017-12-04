@@ -69,19 +69,19 @@ Default would be:
 	/dev/da1	none	swap	sw	0	0
 
 ### Datasets:
-Base
-lib32
-src
+	Base
+	lib32
+	src
 
 ### Keymap:
-Default en-US
+	Default en-US
 
 ### Networking:
-Interface is vtnet0
-IPv4 is provided by DHCP
-IPv4 DNS is set to 8.8.8.8
-IPv6 is assigned via SLAAC
-IPv6 DNS is set to 2600:3c03::5 (Newark)
+-Interface is vtnet0
+-IPv4 is provided by DHCP
+-IPv4 DNS is set to 8.8.8.8
+-IPv6 is assigned via SLAAC
+-IPv6 DNS is set to 2600:3c03::5 (Newark)
 
 ### Packages:
 `pkg` has been bootstrapped. No database has been created and no other ports installed.
