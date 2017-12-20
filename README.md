@@ -128,7 +128,7 @@ Installation is as simple as:
 
 	`apt-get install -y ca-certificates`
 	
-	`wget -O - https://github.com/RainbowHackerHorse/FreeBSD-On-Linode/raw/master/freebsd111-linode.img  | dd of=/dev/sda`
+	`wget -O - https://media.githubusercontent.com/media/RainbowHackerHorse/FreeBSD-On-Linode/master/freebsd111-linode.img  | dd of=/dev/sda`
 
 It'll take a little while to run, as GitHub's LFS server can be a bit slow to initially retrive the file.
 I may move to other storage for future releases.
