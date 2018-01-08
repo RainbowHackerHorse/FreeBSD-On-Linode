@@ -134,8 +134,6 @@ Installation is as simple as:
 	
 	`wget -O - https://f001.backblazeb2.com/file/linode-freebsd-img/FreeBSD11/freebsd111-linode.img  | dd of=/dev/sda`
 
-It'll take a little while to run, as GitHub's LFS server can be a bit slow to initially retrive the file.
-I may move to other storage for future releases.
 
 ## Download
 https://f001.backblazeb2.com/file/linode-freebsd-img/FreeBSD11/freebsd111-linode.img
