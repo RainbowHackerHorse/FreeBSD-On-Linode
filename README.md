@@ -1,5 +1,12 @@
 # FreeBSD On Linode - 11.1-RELEASE x64
 
+### A Note about image location:
+I've now moved it off git LFS because it was annoying and expensive.
+The image is now hosted at https://f001.backblazeb2.com/file/linode-freebsd-img/FreeBSD11/freebsd111-linode.img
+You'll need to fetch it separately from the contents of the git repo.
+Granted, without the git-lfs tool installed, you needed to anyway.
+This simplifies things and makes downloads faster as well.
+
 #### Table of Contents
 
 1. [What is this?](#what-is-this)
@@ -7,6 +14,7 @@
 3. [Verification and Integrity Checking](#verification-and-integrity-checking)
 4. [Notes](#notes)
 5. [Installation](#installation)
+6. [Download Link](#download)
 
 ## What is this?
 
@@ -15,10 +23,6 @@ mini-memstick installer. It is meant to be used with a paravirtual
 KVM Linode from http://linode.com
 
 Filesize is 1536 Mb
-
-The Installer is now an IMG file in this repo delivered by git-lfs
-
-https://git-lfs.github.com/
 
 Certain changes made to this image will cause some freatures to not
 work right off the bat with a Full Virtualization Linode.
@@ -128,7 +132,10 @@ Installation is as simple as:
 
 	`apt-get install -y ca-certificates`
 	
-	`wget -O - https://media.githubusercontent.com/media/RainbowHackerHorse/FreeBSD-On-Linode/master/freebsd111-linode.img  | dd of=/dev/sda`
+	`wget -O - https://f001.backblazeb2.com/file/linode-freebsd-img/FreeBSD11/freebsd111-linode.img  | dd of=/dev/sda`
 
 It'll take a little while to run, as GitHub's LFS server can be a bit slow to initially retrive the file.
 I may move to other storage for future releases.
+
+## Download
+https://f001.backblazeb2.com/file/linode-freebsd-img/FreeBSD11/freebsd111-linode.img
